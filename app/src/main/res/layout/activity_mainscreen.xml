@@ -9,8 +9,18 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="groupl.cs314.quizapp.mainscreen">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            android:layout_width="213dp"
+            android:layout_height="91dp"
+            android:text="Start Quiz"
+            android:id="@+id/startQuizButton"
+            android:layout_gravity="center"
+            android:textSize="30dp" />
+    </FrameLayout>
 </RelativeLayout>
