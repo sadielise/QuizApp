@@ -19,6 +19,4 @@ public class start_screen extends AppCompatActivity {
         Intent intent = new Intent(this, quiz_screen.class);
         startActivity(intent);
     }
-
-
 }
