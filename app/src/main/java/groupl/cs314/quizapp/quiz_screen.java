@@ -8,6 +8,10 @@ import android.widget.Toast;
 
 public class quiz_screen extends Activity {
 
+    protected int currentQuestion = 1;
+    protected int numCorrectAnswers = 0;
+    protected int numAttemptedQuestions = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,6 +22,9 @@ public class quiz_screen extends Activity {
         Toast toast = Toast.makeText(quiz_screen.this, "Previous question", Toast.LENGTH_SHORT);
         toast.setGravity(Gravity.CENTER_VERTICAL|Gravity.CENTER_HORIZONTAL, 0, 0);
         toast.show();
+
+        // go back to previous question unless you're on the first question
+
     }
 
     public void onClickAnswer(View view){
@@ -37,4 +44,9 @@ public class quiz_screen extends Activity {
         toast.setGravity(Gravity.CENTER_VERTICAL|Gravity.CENTER_HORIZONTAL, 0, 0);
         toast.show();
     }
+
+    private void displayQuestion(int questionNumber){
+
+    }
+
 }

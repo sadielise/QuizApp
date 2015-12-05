@@ -8,6 +8,13 @@
     <string name="back_button">Back</string>
     <string name="finish_quiz_button">Finish Quiz</string>
     <string name="app_title">The Best Quiz App Ever</string>
+    <string name="performance_results">Performance Results</string>
+    <string name="total_number_questions">Total Number of Questions</string>
+    <string name="number_questions_attempted">Number of Questions Attempted</string>
+    <string name="number_correct_answers">Number of Correct Answers</string>
+    <string name="play_again_button">Play Again</string>
+    <string name="exit_button">Exit</string>
+
     <string name="question_one">Question 1</string>
     <string name="question_two">Question 2</string>
     <string name="question_three">Question 3</string>
@@ -18,16 +25,13 @@
     <string name="question_eight">Question 8</string>
     <string name="question_nine">Question 9</string>
     <string name="question_ten">Question 10</string>
-    <string name="question_one_text">This is a question</string>
+
     <string name="answer_one_text">This is the first answer</string>
     <string name="answer_two_text">This is the second answer</string>
     <string name="answer_three_text">This is the third answer</string>
     <string name="answer_four_text">This is the fourth answer</string>
-    <string name="performance_results">Performance Results</string>
-    <string name="total_number_questions">Total Number of Questions</string>
-    <string name="number_questions_attempted">Number of Questions Attempted</string>
-    <string name="number_correct_answers">Number of Correct Answers</string>
-    <string name="play_again_button">Play Again</string>
-    <string name="exit_button">Exit</string>
+
+    <string name="question_one_text">This is a question</string>
+
 
 </resources>
