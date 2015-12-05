@@ -43,8 +43,8 @@ public class quiz_screen extends Activity {
             Toast toast = Toast.makeText(quiz_screen.this, "Quiz complete", Toast.LENGTH_SHORT);
             toast.setGravity(Gravity.CENTER_VERTICAL|Gravity.CENTER_HORIZONTAL, 0, 0);
             toast.show();
-            /**Intent intent = new Intent(this, result_screen.class);
-            startActivity(intent);**/
+            Intent intent = new Intent(this, result_screen.class);
+            startActivity(intent);
         }
         else{
             currentQuestion++;
@@ -56,8 +56,8 @@ public class quiz_screen extends Activity {
         Toast toast = Toast.makeText(quiz_screen.this, "Quiz complete", Toast.LENGTH_SHORT);
         toast.setGravity(Gravity.CENTER_VERTICAL|Gravity.CENTER_HORIZONTAL, 0, 0);
         toast.show();
-        /**Intent intent = new Intent(this, result_screen.class);
-        startActivity(intent);**/
+        Intent intent = new Intent(this, result_screen.class);
+        startActivity(intent);
     }
 
     private void displayQuestion(int questionNumber){
