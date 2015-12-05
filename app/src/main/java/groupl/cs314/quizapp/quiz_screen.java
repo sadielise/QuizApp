@@ -6,7 +6,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.Toast;
 
-public class QuizScreen extends Activity {
+public class quiz_screen extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,25 +15,25 @@ public class QuizScreen extends Activity {
     }
 
     public void onClickBack(View view){
-        Toast toast = Toast.makeText(QuizScreen.this, "Previous question", Toast.LENGTH_SHORT);
+        Toast toast = Toast.makeText(quiz_screen.this, "Previous question", Toast.LENGTH_SHORT);
         toast.setGravity(Gravity.CENTER_VERTICAL|Gravity.CENTER_HORIZONTAL, 0, 0);
         toast.show();
     }
 
     public void onClickAnswer(View view){
-        Toast toast = Toast.makeText(QuizScreen.this, "Answered the question", Toast.LENGTH_SHORT);
+        Toast toast = Toast.makeText(quiz_screen.this, "Answered the question", Toast.LENGTH_SHORT);
         toast.setGravity(Gravity.CENTER_VERTICAL|Gravity.CENTER_HORIZONTAL, 0, 0);
         toast.show();
     }
 
     public void onClickNext(View view){
-        Toast toast = Toast.makeText(QuizScreen.this, "Next question", Toast.LENGTH_SHORT);
+        Toast toast = Toast.makeText(quiz_screen.this, "Next question", Toast.LENGTH_SHORT);
         toast.setGravity(Gravity.CENTER_VERTICAL|Gravity.CENTER_HORIZONTAL, 0, 0);
         toast.show();
     }
 
     public void onClickFinish(View view){
-        Toast toast = Toast.makeText(QuizScreen.this, "Finish quiz", Toast.LENGTH_SHORT);
+        Toast toast = Toast.makeText(quiz_screen.this, "Finish quiz", Toast.LENGTH_SHORT);
         toast.setGravity(Gravity.CENTER_VERTICAL|Gravity.CENTER_HORIZONTAL, 0, 0);
         toast.show();
     }
