@@ -2,4 +2,24 @@
     <string name="app_name">QuizApp</string>
     <string name="title_activity_result_screen">result_screen</string>
     <string name="title_activity_quiz_screen">QuizScreen</string>
+    <string name="next_button">Next</string>
+    <string name="answer_button">Answer</string>
+    <string name="back_button">Back</string>
+    <string name="finish_quiz_button">Finish Quiz</string>
+    <string name="app_title">The Best Quiz App Ever</string>
+    <string name="question_one">Question 1</string>
+    <string name="question_two">Question 2</string>
+    <string name="question_three">Question 3</string>
+    <string name="question_four">Question 4</string>
+    <string name="question_five">Question 5</string>
+    <string name="question_six">Question 6</string>
+    <string name="question_seven">Question 7</string>
+    <string name="question_eight">Question 8</string>
+    <string name="question_nine">Question 9</string>
+    <string name="question_ten">Question 10</string>
+    <string name="question_one_text">This is a question</string>
+    <string name="answer_one_text">This is the first answer</string>
+    <string name="answer_two_text">This is the second answer</string>
+    <string name="answer_three_text">This is the third answer</string>
+    <string name="answer_four_text">This is the fourth answer</string>
 </resources>
