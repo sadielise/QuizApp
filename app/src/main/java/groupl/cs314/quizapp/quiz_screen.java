@@ -19,12 +19,12 @@ public class quiz_screen extends Activity {
     }
 
     public void onClickBack(View view){
-        Toast toast = Toast.makeText(quiz_screen.this, "Previous question", Toast.LENGTH_SHORT);
-        toast.setGravity(Gravity.CENTER_VERTICAL|Gravity.CENTER_HORIZONTAL, 0, 0);
-        toast.show();
-
         // go back to previous question unless you're on the first question
-
+        if(currentQuestion == 1){
+            Toast toast = Toast.makeText(quiz_screen.this, "No previous question", Toast.LENGTH_SHORT);
+            toast.setGravity(Gravity.CENTER_VERTICAL|Gravity.CENTER_HORIZONTAL, 0, 0);
+            toast.show();
+        }
     }
 
     public void onClickAnswer(View view){
