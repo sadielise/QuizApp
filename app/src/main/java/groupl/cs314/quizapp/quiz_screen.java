@@ -15,7 +15,7 @@ import java.util.Random;
 public class quiz_screen extends Activity {
 
     protected int currentQuestion = 1;
-    ArrayList<Integer> quizQuestions = getRandomArray(40);
+    protected ArrayList<Integer> quizQuestions = getRandomArray(40);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
