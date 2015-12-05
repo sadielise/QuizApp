@@ -2,6 +2,7 @@
     <string name="app_name">QuizApp</string>
     <string name="title_activity_result_screen">result_screen</string>
     <string name="title_activity_quiz_screen">QuizScreen</string>
+    <string name="start_quiz_button">Start Quiz</string>
     <string name="next_button">Next</string>
     <string name="answer_button">Answer</string>
     <string name="back_button">Back</string>
@@ -22,4 +23,11 @@
     <string name="answer_two_text">This is the second answer</string>
     <string name="answer_three_text">This is the third answer</string>
     <string name="answer_four_text">This is the fourth answer</string>
+    <string name="performance_results">Performance Results</string>
+    <string name="total_number_questions">Total Number of Questions</string>
+    <string name="number_questions_attempted">Number of Questions Attempted</string>
+    <string name="number_correct_answers">Number of Correct Answers</string>
+    <string name="play_again_button">Play Again</string>
+    <string name="exit_button">Exit</string>
+
 </resources>
