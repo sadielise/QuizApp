@@ -69,4 +69,30 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/finish_quiz_button"
+        android:id="@+id/finishQuizButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/appTitleText"
+        android:layout_alignStart="@+id/appTitleText"
+        android:background="#5e62c1"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        android:layout_alignRight="@+id/totalNumberQuestionsText"
+        android:layout_alignEnd="@+id/totalNumberQuestionsText" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Play Again!"
+        android:id="@+id/button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textSize="20dp"
+        android:textColor="#ffffff"
+        android:background="#5e62c1" />
+
 </RelativeLayout>
