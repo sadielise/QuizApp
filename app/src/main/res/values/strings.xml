@@ -31,7 +31,110 @@
     <string name="answer_three_text">This is the third answer</string>
     <string name="answer_four_text">This is the fourth answer</string>
 
-    <string name="question_one_text">This is a question</string>
+    <string-array name="words">
+        <item>amandation</item>
+        <item>archiloquy</item>
+        <item>assectation</item>
+        <item>austerulous</item>
+        <item>autexousious</item>
+        <item>brabeum</item>
+        <item>brochity</item>
+        <item>buccellation</item>
+        <item>cameranious</item>
+        <item>dodrantal</item>
+        <item>ducenarious</item>
+        <item>epalpebrate</item>
+        <item>ephydriad</item>
+        <item>findible</item>
+        <item>frenigerent</item>
+        <item>hirquitalliency</item>
+        <item>homerkin</item>
+        <item>icasm</item>
+        <item>ingeniculation</item>
+        <item>jussulent</item>
+        <item>lignatile</item>
+        <item>mitescent</item>
+        <item>montivagant</item>
+        <item>novaturient</item>
+        <item>ossifragant</item>
+        <item>palintocy</item>
+        <item>patration</item>
+        <item>penintime</item>
+        <item>sarcinarious</item>
+        <item>sedecuple</item>
+        <item>sinapistic</item>
+        <item>soloecal</item>
+        <item>speustic</item>
+        <item>stagma</item>
+        <item>stiricide</item>
+        <item>supellectile</item>
+        <item>synallactic</item>
+        <item>tenellous</item>
+        <item>tetanothrum</item>
+        <item>teterrimous</item>
+        <item>thural</item>
+        <item>thysiastery</item>
+        <item>tollation</item>
+        <item>tristifical</item>
+        <item>ulvose</item>
+        <item>uviferous</item>
+        <item>vadiation</item>
+        <item>venialia</item>
+        <item>veprecose</item>
+        <item>virtival</item>
+    </string-array>
 
+    <string-array name="definitions">
+        <item>act of sending away or dismissing</item>
+        <item>first part of a speech</item>
+        <item>act of following after something else</item>
+        <item>somewhat or slightly harsh</item>
+        <item>exercising or possessing free will</item>
+        <item>reward or prize</item>
+        <item>projecting or crooked quality of teeth</item>
+        <item>act of dividing into small morsels</item>
+        <item>of or relating to a chamber</item>
+        <item>of nine inches in length</item>
+        <item>pertaining to two hundred</item>
+        <item>lacking eyebrows</item>
+        <item>water-nymph</item>
+        <item>able to be cleft or split</item>
+        <item>bearing a bridle</item>
+        <item>strength of voice</item>
+        <item>old liquid measure for beer</item>
+        <item>figurative expression</item>
+        <item>bending of the knee</item>
+        <item>full of broth or soup</item>
+        <item>living or growing on wood</item>
+        <item>growing mild</item>
+        <item>wandering over hills and mountains</item>
+        <item>desiring changes or alterations</item>
+        <item>bone-breaking</item>
+        <item>repayment of interest paid on a loan</item>
+        <item>perfection or completion of something</item>
+        <item>second from inmost</item>
+        <item>serving to carry a burden or load</item>
+        <item>quantity sixteen times another</item>
+        <item>consisting of mustard</item>
+        <item>provincially incorrect</item>
+        <item>made or baked in haste</item>
+        <item>any distilled liquor</item>
+        <item>falling of icicles from a house</item>
+        <item>of the nature of furniture</item>
+        <item>reconciliatory</item>
+        <item>somewhat tender</item>
+        <item>cosmetic for removing wrinkles</item>
+        <item>most foul</item>
+        <item>of or pertaining to incense</item>
+        <item>sacrificial altar</item>
+        <item>act of lifting</item>
+        <item>causing to be sad or mournful</item>
+        <item>full of reeds or weeds</item>
+        <item>bearing grapes or vines</item>
+        <item>act of requiring a pledge</item>
+        <item>minor sins or offences</item>
+        <item>full of brambles</item>
+        <item>metal support for an axle</item>
+    </string-array>
 
 </resources>

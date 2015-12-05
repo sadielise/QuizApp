@@ -10,8 +10,6 @@ import android.widget.Toast;
 public class quiz_screen extends Activity {
 
     protected int currentQuestion = 1;
-    protected int numCorrectAnswers = 0;
-    protected int numAttemptedQuestions = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,26 +31,31 @@ public class quiz_screen extends Activity {
     }
 
     public void onClickAnswer(View view){
-        Toast toast = Toast.makeText(quiz_screen.this, "Answered the question", Toast.LENGTH_SHORT);
-        toast.setGravity(Gravity.CENTER_VERTICAL|Gravity.CENTER_HORIZONTAL, 0, 0);
-        toast.show();
+        boolean answer = checkAnswer();
+
+        if(answer){
+            Toast toast = Toast.makeText(quiz_screen.this, "Correct!", Toast.LENGTH_SHORT);
+            toast.setGravity(Gravity.CENTER_VERTICAL|Gravity.CENTER_HORIZONTAL, 0, 0);
+            toast.show();
+        }
+        else{
+            Toast toast = Toast.makeText(quiz_screen.this, "Wrong answer!", Toast.LENGTH_SHORT);
+            toast.setGravity(Gravity.CENTER_VERTICAL|Gravity.CENTER_HORIZONTAL, 0, 0);
+            toast.show();
+        }
+
+        nextQuestion();
     }
 
     public void onClickNext(View view){
-        if(currentQuestion == 10){
-            Toast toast = Toast.makeText(quiz_screen.this, "Quiz complete", Toast.LENGTH_SHORT);
-            toast.setGravity(Gravity.CENTER_VERTICAL|Gravity.CENTER_HORIZONTAL, 0, 0);
-            toast.show();
-            Intent intent = new Intent(this, result_screen.class);
-            startActivity(intent);
-        }
-        else{
-            currentQuestion++;
-            displayQuestion(currentQuestion);
-        }
+        nextQuestion();
     }
 
     public void onClickFinish(View view){
+        goToResults();
+    }
+
+    private void goToResults(){
         Toast toast = Toast.makeText(quiz_screen.this, "Quiz complete", Toast.LENGTH_SHORT);
         toast.setGravity(Gravity.CENTER_VERTICAL|Gravity.CENTER_HORIZONTAL, 0, 0);
         toast.show();
@@ -60,8 +63,23 @@ public class quiz_screen extends Activity {
         startActivity(intent);
     }
 
+    private void nextQuestion(){
+        if(currentQuestion == 10){
+            goToResults();
+        }
+        else{
+            currentQuestion++;
+            displayQuestion(currentQuestion);
+        }
+    }
+
     private void displayQuestion(int questionNumber){
 
+
+    }
+
+    private boolean checkAnswer(){
+        return false;
     }
 
 }
