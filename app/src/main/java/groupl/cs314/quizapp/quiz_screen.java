@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.view.Gravity;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class quiz_screen extends Activity {
@@ -74,6 +75,7 @@ public class quiz_screen extends Activity {
     }
 
     private void displayQuestion(int questionNumber){
+        ((TextView)findViewById(R.id.questionNumberText)).setText("Question " + questionNumber);
 
 
     }
