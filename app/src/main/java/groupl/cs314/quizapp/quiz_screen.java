@@ -22,12 +22,13 @@ public class quiz_screen extends Activity {
 
     //keeps track of the correct answers
     //null = not answerd, "correct" = correct, "incorrect" = incorrect
-    protected String[] answers = new String[numQuestions];
+    protected static String[] answers;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz_screen);
+        answers = new String[numQuestions];
     }
 
     public void onClickBack(View view){
@@ -92,7 +93,6 @@ public class quiz_screen extends Activity {
     }
 
     private void nextQuestion(){
-    //NOTE!!!!!!  When Question 10 is answered and the answer button is selected, the app crashes
         if(currentQuestion == 10){
             goToResults();
         }
@@ -117,24 +117,23 @@ public class quiz_screen extends Activity {
 
     //return true if the answer is correct.
     private boolean checkAnswer(String answer){
-        int questionIndex = 0;
-        //int questionIndex = tannersArray.get(currentQuestion);
+        //int questionIndex = 0;
+        int questionIndex = quizQuestions.get(currentQuestion-1);
         //check if answer is right or wrong
         //update array of responses to keep track of right and wrong answers
         if(answer != null){
             if(getResources().getStringArray(R.array.definitions)[questionIndex].equals(answer)) {
-                answers[currentQuestion] = "correct";
+                answers[currentQuestion-1] = "correct";
                 return true;
             }
             else {
-                answers[currentQuestion] = "incorrect";
+                answers[currentQuestion-1] = "incorrect";
                 return false;
             }
         }
         //if answer is null then the user did not attempt the question
-        answers[currentQuestion] = null;
+        answers[currentQuestion-1] = null;
         return false;
-
 
     }
 
