@@ -70,14 +70,13 @@ public class quiz_screen extends Activity {
                 toast.setGravity(Gravity.CENTER_VERTICAL | Gravity.CENTER_HORIZONTAL, 0, 0);
                 toast.show();
             }
+            nextQuestion();
         }
         else{
             Toast toast = Toast.makeText(quiz_screen.this, "Question not answered", Toast.LENGTH_SHORT);
             toast.setGravity(Gravity.CENTER_VERTICAL| Gravity.CENTER_HORIZONTAL, 0, 0);
             toast.show();
         }
-
-        nextQuestion();
     }
 
     public void onClickNext(View view){
@@ -98,7 +97,9 @@ public class quiz_screen extends Activity {
 
     private void nextQuestion(){
         if(currentQuestion == 10){
-            goToResults();
+            Toast toast = Toast.makeText(quiz_screen.this, "No more questions available", Toast.LENGTH_SHORT);
+            toast.setGravity(Gravity.CENTER_VERTICAL|Gravity.CENTER_HORIZONTAL, 0, 0);
+            toast.show();
         }
         else{
             currentQuestion++;
