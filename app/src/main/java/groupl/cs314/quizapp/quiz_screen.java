@@ -10,10 +10,15 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
 public class quiz_screen extends Activity {
 
     protected final int numQuestions = 10;
     protected int currentQuestion = 1;
+    ArrayList<Integer> quizQuestions = getRandomArray(40);
 
     //keeps track of the correct answers
     //null = not answerd, "correct" = correct, "incorrect" = incorrect
@@ -131,6 +136,34 @@ public class quiz_screen extends Activity {
         return false;
 
 
+    }
+
+    private ArrayList<Integer> getRandomArray(int max){
+        ArrayList<Integer> ra = new ArrayList<Integer>();
+        Random gen = new Random();
+        int rn = gen.nextInt(max);
+        int governor = 0;
+        while(ra.size()<max){
+            //safety
+            if(governor == 10){
+                rn = 0;
+                boolean status = true;
+                while(status){
+                    if(!ra.contains(rn))
+                        status = false;
+                    else
+                        rn++;
+                }
+            }
+            if(!ra.contains(rn)){
+                ra.add(rn);
+                governor = 0;
+            }else{
+                governor++;
+            }
+            rn = gen.nextInt(max);
+        }
+        return ra;
     }
 
 }
