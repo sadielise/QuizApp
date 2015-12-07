@@ -10,6 +10,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -18,7 +19,8 @@ public class quiz_screen extends Activity {
 
     protected final int numQuestions = 10;
     protected int currentQuestion = 1;
-    ArrayList<Integer> quizQuestions = getRandomArray(40);
+    ArrayList<Integer> quizQuestions = getRandomArray(4*numQuestions);
+    ArrayList<ArrayList<Integer>> questionArray = new ArrayList<>(numQuestions);
 
     //keeps track of the correct answers
     //null = not answerd, "correct" = correct, "incorrect" = incorrect
@@ -29,6 +31,7 @@ public class quiz_screen extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz_screen);
         answers = new String[numQuestions];
+        initializeQuestions();
         displayQuestion(1);
     }
 
@@ -106,13 +109,12 @@ public class quiz_screen extends Activity {
     private void displayQuestion(int questionNumber){
 
         ((TextView)findViewById(R.id.questionNumberText)).setText("Question " + questionNumber);
-        //Tanner you should fix this because I'm just testing stuff :)
         ((RadioGroup)findViewById(R.id.answerRadioGroup)).clearCheck();
         ((TextView)findViewById(R.id.questionText)).setText(getResources().getStringArray(R.array.words)[quizQuestions.get((currentQuestion-1)*4)]);
-        ((TextView)findViewById(R.id.answerOneRadio)).setText(getResources().getStringArray(R.array.definitions)[quizQuestions.get(((currentQuestion-1)*4))]);
-        ((TextView)findViewById(R.id.answerTwoRadio)).setText(getResources().getStringArray(R.array.definitions)[quizQuestions.get(((currentQuestion-1)*4) + 1)]);
-        ((TextView)findViewById(R.id.answerThreeRadio)).setText(getResources().getStringArray(R.array.definitions)[quizQuestions.get(((currentQuestion - 1) * 4) + 2)]);
-        ((TextView)findViewById(R.id.answerFourRadio)).setText(getResources().getStringArray(R.array.definitions)[quizQuestions.get(((currentQuestion-1)*4) +3)]);
+        ((TextView)findViewById(R.id.answerOneRadio  )).setText(getResources().getStringArray(R.array.definitions)[quizQuestions.get(((currentQuestion-1)*4) + (questionArray.get(currentQuestion-1)).get(0))]);
+        ((TextView)findViewById(R.id.answerTwoRadio  )).setText(getResources().getStringArray(R.array.definitions)[quizQuestions.get(((currentQuestion-1)*4) + (questionArray.get(currentQuestion-1)).get(1))]);
+        ((TextView)findViewById(R.id.answerThreeRadio)).setText(getResources().getStringArray(R.array.definitions)[quizQuestions.get(((currentQuestion-1)*4) + (questionArray.get(currentQuestion-1)).get(2))]);
+        ((TextView)findViewById(R.id.answerFourRadio )).setText(getResources().getStringArray(R.array.definitions)[quizQuestions.get(((currentQuestion-1)*4) + (questionArray.get(currentQuestion-1)).get(3))]);
 
     }
 
@@ -139,7 +141,7 @@ public class quiz_screen extends Activity {
     }
 
     private ArrayList<Integer> getRandomArray(int max){
-        ArrayList<Integer> ra = new ArrayList<Integer>();
+        ArrayList<Integer> ra = new ArrayList<>();
         Random gen = new Random();
         int rn = gen.nextInt(max);
         int governor = 0;
@@ -164,6 +166,12 @@ public class quiz_screen extends Activity {
             rn = gen.nextInt(max);
         }
         return ra;
+    }
+
+    private void initializeQuestions(){
+        for(int i=0; i<numQuestions; i++){
+            questionArray.add( getRandomArray(4) );
+        }
     }
 
 }
