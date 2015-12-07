@@ -61,7 +61,7 @@ public class result_screen extends Activity {
                 } else if (answers[i].equals("incorrect")) {
                     answeredWrong++;
                 } else {
-                    System.out.println("Unepected value in answers array!!!");
+                    System.out.println("Unexpected value in answers array!!!");
                 }
             }
         }

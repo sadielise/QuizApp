@@ -29,6 +29,7 @@ public class quiz_screen extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz_screen);
         answers = new String[numQuestions];
+        displayQuestion(1);
     }
 
     public void onClickBack(View view){
@@ -107,18 +108,18 @@ public class quiz_screen extends Activity {
         ((TextView)findViewById(R.id.questionNumberText)).setText("Question " + questionNumber);
         //Tanner you should fix this because I'm just testing stuff :)
         ((RadioGroup)findViewById(R.id.answerRadioGroup)).clearCheck();
-        ((TextView)findViewById(R.id.questionText)).setText(getResources().getStringArray(R.array.words)[0]);
-        ((TextView)findViewById(R.id.answerOneRadio)).setText(getResources().getStringArray(R.array.definitions)[0]);
-        ((TextView)findViewById(R.id.answerTwoRadio)).setText(getResources().getStringArray(R.array.definitions)[1]);
-        ((TextView)findViewById(R.id.answerThreeRadio)).setText(getResources().getStringArray(R.array.definitions)[2]);
-        ((TextView)findViewById(R.id.answerFourRadio)).setText(getResources().getStringArray(R.array.definitions)[3]);
+        ((TextView)findViewById(R.id.questionText)).setText(getResources().getStringArray(R.array.words)[quizQuestions.get((currentQuestion-1)*4)]);
+        ((TextView)findViewById(R.id.answerOneRadio)).setText(getResources().getStringArray(R.array.definitions)[quizQuestions.get(((currentQuestion-1)*4))]);
+        ((TextView)findViewById(R.id.answerTwoRadio)).setText(getResources().getStringArray(R.array.definitions)[quizQuestions.get(((currentQuestion-1)*4) + 1)]);
+        ((TextView)findViewById(R.id.answerThreeRadio)).setText(getResources().getStringArray(R.array.definitions)[quizQuestions.get(((currentQuestion - 1) * 4) + 2)]);
+        ((TextView)findViewById(R.id.answerFourRadio)).setText(getResources().getStringArray(R.array.definitions)[quizQuestions.get(((currentQuestion-1)*4) +3)]);
 
     }
 
     //return true if the answer is correct.
     private boolean checkAnswer(String answer){
         //int questionIndex = 0;
-        int questionIndex = quizQuestions.get(currentQuestion-1);
+        int questionIndex = quizQuestions.get((currentQuestion-1)*4);
         //check if answer is right or wrong
         //update array of responses to keep track of right and wrong answers
         if(answer != null){
