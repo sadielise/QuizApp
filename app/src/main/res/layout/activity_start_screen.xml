@@ -17,7 +17,7 @@
         android:onClick="StartQuiz"
         android:padding="20dp"
         android:textColor="#ffffff"
-        android:background="#ff5e62c1"
+        android:background="@string/custom_blue"
         android:textSize="30dp" />
 
 

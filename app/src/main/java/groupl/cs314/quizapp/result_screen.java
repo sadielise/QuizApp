@@ -39,7 +39,7 @@ public class result_screen extends Activity {
 
     public void onClickExit(View view){
         // go back to previous question unless you're on the first question
-            Toast toast = Toast.makeText(result_screen.this, "Thanks for Playing!", Toast.LENGTH_SHORT);
+            Toast toast = Toast.makeText(result_screen.this, "Thanks for playing!", Toast.LENGTH_SHORT);
             toast.setGravity(Gravity.CENTER_VERTICAL | Gravity.CENTER_HORIZONTAL, 0, 0);
             toast.show();
             ExitApp();
