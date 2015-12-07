@@ -6,6 +6,10 @@
     android:background="#d4d4d4"
     android:clickable="false"
     android:transitionGroup="false">
+    <View android:id="@+id/strut"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -76,12 +80,12 @@
         android:text="@string/exit_button"
         android:id="@+id/exitQuizButton"
         android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/appTitleText"
-        android:layout_alignStart="@+id/appTitleText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/strut"
         android:background="#5e62c1"
         android:textColor="#ffffff"
         android:textSize="20dp"
-        android:width="150dp"
+        android:width="0dp"
         android:padding="5dp"
         android:layout_margin="5dp"
         android:onClick="onClickExit" />
@@ -93,7 +97,7 @@
         android:id="@+id/buttonPlayAgain"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/strut"
         android:textSize="20dp"
         android:textColor="#ffffff"
         android:background="#5e62c1"
@@ -101,7 +105,8 @@
         android:layout_toEndOf="@+id/numberCorrectAnswersText"
         android:layout_margin="5dp"
         android:padding="5dp"
-        android:width="150dp"
+        android:layout_weight=".50"
+        android:width="0dp"
         android:onClick="onClickPlayAgain" />
 
 </RelativeLayout>
