@@ -39,7 +39,7 @@ public class quiz_screen extends Activity {
         // go back to previous question unless you're on the first question
         if(currentQuestion == 1){
             Toast toast = Toast.makeText(quiz_screen.this, "No previous question available", Toast.LENGTH_SHORT);
-            toast.setGravity(Gravity.CENTER_VERTICAL|Gravity.CENTER_HORIZONTAL, 0, 0);
+            toast.setGravity(Gravity.CENTER_VERTICAL|Gravity.CENTER_HORIZONTAL, 0, 400);
             toast.show();
         }
         else{
@@ -63,18 +63,18 @@ public class quiz_screen extends Activity {
             boolean answer = checkAnswer(response);
             if (answer) {
                 Toast toast = Toast.makeText(quiz_screen.this, "Correct!", Toast.LENGTH_SHORT);
-                toast.setGravity(Gravity.CENTER_VERTICAL | Gravity.CENTER_HORIZONTAL, 0, 0);
+                toast.setGravity(Gravity.CENTER_VERTICAL | Gravity.CENTER_HORIZONTAL, 0, 400);
                 toast.show();
             } else {
                 Toast toast = Toast.makeText(quiz_screen.this, "Wrong answer!", Toast.LENGTH_SHORT);
-                toast.setGravity(Gravity.CENTER_VERTICAL | Gravity.CENTER_HORIZONTAL, 0, 0);
+                toast.setGravity(Gravity.CENTER_VERTICAL | Gravity.CENTER_HORIZONTAL, 0, 400);
                 toast.show();
             }
             nextQuestion();
         }
         else{
             Toast toast = Toast.makeText(quiz_screen.this, "Question not answered", Toast.LENGTH_SHORT);
-            toast.setGravity(Gravity.CENTER_VERTICAL| Gravity.CENTER_HORIZONTAL, 0, 0);
+            toast.setGravity(Gravity.CENTER_VERTICAL| Gravity.CENTER_HORIZONTAL, 0, 400);
             toast.show();
         }
 
@@ -90,7 +90,7 @@ public class quiz_screen extends Activity {
 
     private void goToResults(){
         Toast toast = Toast.makeText(quiz_screen.this, "Quiz complete", Toast.LENGTH_SHORT);
-        toast.setGravity(Gravity.CENTER_VERTICAL|Gravity.CENTER_HORIZONTAL, 0, 0);
+        toast.setGravity(Gravity.CENTER_VERTICAL|Gravity.CENTER_HORIZONTAL, 0, 400);
         toast.show();
         Intent intent = new Intent(this, result_screen.class);
         startActivity(intent);
