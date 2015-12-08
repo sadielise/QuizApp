@@ -77,6 +77,7 @@ public class quiz_screen extends Activity {
             toast.setGravity(Gravity.CENTER_VERTICAL| Gravity.CENTER_HORIZONTAL, 0, 0);
             toast.show();
         }
+
     }
 
     public void onClickNext(View view){
@@ -96,10 +97,8 @@ public class quiz_screen extends Activity {
     }
 
     private void nextQuestion(){
-        if(currentQuestion == 10){
-            Toast toast = Toast.makeText(quiz_screen.this, "No more questions available", Toast.LENGTH_SHORT);
-            toast.setGravity(Gravity.CENTER_VERTICAL|Gravity.CENTER_HORIZONTAL, 0, 0);
-            toast.show();
+        if(currentQuestion == numQuestions){
+            goToResults();
         }
         else{
             currentQuestion++;
